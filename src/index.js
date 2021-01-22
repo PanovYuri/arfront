@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import ArView from './components/arview/arview';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Route exact path="/" component={App} />
+    <Route path="/scann" component={ArView} />
+  </Router>,
   document.getElementById('root')
 );
 
